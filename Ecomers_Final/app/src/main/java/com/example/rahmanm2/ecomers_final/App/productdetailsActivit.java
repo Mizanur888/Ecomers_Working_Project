@@ -22,6 +22,9 @@ import com.example.rahmanm2.ecomers_final.SampleDataModel.OrderModel;
 import com.example.rahmanm2.ecomers_final.config;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class productdetailsActivit extends AppCompatActivity  {
 
     private Toolbar mToolbar;
@@ -29,13 +32,15 @@ public class productdetailsActivit extends AppCompatActivity  {
     private ImageView mImageView;
     private CollapsingToolbarLayout mCollapsingToolbarLayout;
     private FloatingActionButton mBtnChart;
-
+    public static List<OrderModel>Orderlist;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_productdetails);
         setToolbar();
         setupCollapseableToolbar();
+        Orderlist = new ArrayList<OrderModel>();
+
         mBtnChart = (FloatingActionButton)findViewById(R.id.btnCart);
         priceText = (TextView)findViewById(R.id.txtProductPrice);
         NameText = (TextView)findViewById(R.id.txtProductName);
@@ -70,6 +75,8 @@ public class productdetailsActivit extends AppCompatActivity  {
                        ,"3",
                        priceText.getText().toString());
                //operasi=insert&ProductID=22&ProductName=Cat&ProductDesc=verycat&Quantity=3&ProductPrice=9090
+
+               Orderlist.add(model);
                String url = config.ROOT_URL+"operasi=insert&ProductID="+model.getProductID()+"&ProductName="+
                           model.getProductName()+"&ProductDesc="+model.getProductDesc()+"&Quantity="+model.getQuantity()
                           +"&ProductPrice="+model.getProductprice();
