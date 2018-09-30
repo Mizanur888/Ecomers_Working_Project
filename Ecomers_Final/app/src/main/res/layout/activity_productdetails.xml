@@ -75,6 +75,11 @@
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/layoutDisc"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
                     <TextView
                         android:id="@+id/txtProductName"
                         android:layout_marginTop="8dp"
@@ -86,6 +91,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="bottom|left"/>
+                    <RatingBar
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/RATINGinitialvalueratingID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:theme="@style/ratingBar"
+                        android:stepSize="0.2"/>
+                </LinearLayout>
+
                     <LinearLayout
                         android:id="@+id/layoutPrice"
                         android:orientation="horizontal"
@@ -126,6 +141,43 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </android.support.v7.widget.CardView>
+            <info.hoang8f.widget.FButton
+                android:id="@+id/feedbackID"
+                android:lineSpacingMultiplier="1.5"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_feedback_black_24dp"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:text="Add Feedback"/>
+            <!--TODO add button here to add feedback-->
+            <android.support.v7.widget.CardView
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/productFeedbackID"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:padding="12dp"
+                    android:inputType="text"
+                    android:text="this is product feedback about the product"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/feedbackRecyclerID"
+                android:layout_marginTop="12dp"
+                android:lineSpacingMultiplier="1.5"
+                android:padding="12dp"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 

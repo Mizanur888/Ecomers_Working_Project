@@ -25,7 +25,7 @@
              <item
                 android:id="@+id/idCloath"
                 android:checkable="true"
-                android:title="Cloath"
+                android:title="Order Status"
                 android:icon="@drawable/ic_add_a_photo_black_24dp"/>
             <item
                 android:id="@+id/idElectric"
@@ -36,17 +36,22 @@
     </item>
     <item
         android:id="@+id/FinanceItemNavID"
-        android:title="Finance">
+        android:title="Account Setting">
         <menu>
+            <item
+                android:id="@+id/idMypurchase"
+                android:checkable="true"
+                android:title="My Purchase"
+                android:icon="@drawable/ic_add_a_photo_black_24dp"/>
             <item
                 android:id="@+id/idImage"
                 android:checkable="true"
-                android:title="Books"
+                android:title="My Sell"
                 android:icon="@drawable/ic_add_a_photo_black_24dp"/>
             <item
                 android:id="@+id/idExecoris"
                 android:checkable="true"
-                android:title="Execoris"
+                android:title="My Favorite"
                 android:icon="@drawable/ic_add_a_photo_black_24dp"/>
         </menu>>
     </item>>

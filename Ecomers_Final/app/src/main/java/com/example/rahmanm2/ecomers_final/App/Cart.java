@@ -47,7 +47,7 @@ public class Cart extends AppCompatActivity {
 
         listModel = new ArrayList<OrderModel>();
 
-        String url = config.ROOT_URL+"operasi=view";
+        String url = config.ROOT_URL+"order=view";
 
         mRecyclerview = (RecyclerView)findViewById(R.id.OrderListInCart);
         mRecyclerview.setHasFixedSize(true);
@@ -60,7 +60,7 @@ public class Cart extends AppCompatActivity {
 
     }
     private void LoadData(){
-        String url = config.ROOT_URL+"operasi=view";
+        String url = config.ROOT_URL+"order=view";
 
     }
     public  List<OrderModel>getOrder(String url, final Context context){
