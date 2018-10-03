@@ -15,22 +15,30 @@ public class initMenuItem {
         String[]name = getname();
         String[]desc = getDesc();
         String[]price = getPrices();
-
+        String[]menuItemID = getmenuItemID();
         for(int i = 0;i<image.length;i++){
             MainMenuItem item = new MainMenuItem();
             item.setImages(image[i]);
             item.setProductName(name[i]);
             item.setProductDescription(desc[i]);
             item.setProductPrice(price[i]);
+            item.setProductid(menuItemID[i]);
             mMainMenuItems.add(item);
         }
         return mMainMenuItems;
     }
+
     public static List<FeedbackModel>GetFeedback(){
         FeedModel.add( new FeedbackModel("this is feed back 1"));
                 FeedModel.add(   new FeedbackModel("this is secend Feedback Model"));
                 return FeedModel;
 
+    }
+    private static String[]getmenuItemID(){
+        String []menuItem = {
+               "11","01","02","03","04","06"
+        };
+        return menuItem;
     }
     private static int []getImage(){
 

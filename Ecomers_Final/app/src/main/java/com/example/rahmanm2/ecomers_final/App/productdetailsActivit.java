@@ -124,7 +124,7 @@ public class productdetailsActivit extends AppCompatActivity  {
     private void ratingVar(){
 
         mRatingBar = (RatingBar)findViewById(R.id.RATINGinitialvalueratingID);
-        rating = mRatingBar.getRating();
+        mRatingBar.setRating((float) 5.0);
         feedbackID = (FButton) findViewById(R.id.feedbackID);
         feedbackID.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -142,8 +142,16 @@ public class productdetailsActivit extends AppCompatActivity  {
         linearLayout.setOrientation(LinearLayout.VERTICAL);
 
 
+        RatingBar ratingBar = new RatingBar(this);
+        ratingBar.setMax(5);
+        ratingBar.setNumStars(5);
+        ratingBar.setStepSize(1.2f);
+        linearLayout.addView(ratingBar);
+
         final EditText txtFeedback = new EditText(this);
-        txtFeedback.setInputType(InputType.TYPE_CLASS_TEXT);
+        txtFeedback.setInputType(InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_FLAG_MULTI_LINE);
+        txtFeedback.setHint("Please Enter Feedback");
+        txtFeedback.setMaxLines(10);
         txtFeedback.setHint("Please Enter Feedback Here");
         linearLayout.addView(txtFeedback);
 

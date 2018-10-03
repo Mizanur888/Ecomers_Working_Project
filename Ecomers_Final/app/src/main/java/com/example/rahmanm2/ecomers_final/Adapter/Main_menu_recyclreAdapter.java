@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.rahmanm2.ecomers_final.App.ListMenuActivity;
 import com.example.rahmanm2.ecomers_final.App.productdetailsActivit;
 import com.example.rahmanm2.ecomers_final.R;
 import com.example.rahmanm2.ecomers_final.SampleDataModel.MainMenuItem;
@@ -75,9 +76,27 @@ public class Main_menu_recyclreAdapter extends RecyclerView.Adapter<Main_menu_re
             Log.d("item","itemClicked"+postion);
 
             MainMenuItem itemModel = mMainMenuItems.get(postion);
+            Log.d("productID: ",itemModel.getProductid());
+            Intent dataTransferIntent = new Intent(view.getContext(), ListMenuActivity.class);
+            dataTransferIntent.putExtra(config.PRODUCT_DETAILS,itemModel.getProductid());
+            view.getContext().startActivity(dataTransferIntent);
+        }
+
+     /*   MainMenuItem itemModel = mMainMenuItems.get(postion);
+            Log.d("productID: ",itemModel.getProductid());
+        Intent dataTransferIntent = new Intent(view.getContext(), productdetailsActivit.class);
+            dataTransferIntent.putExtra(config.PRODUCT_DETAILS,itemModel);
+            view.getContext().startActivity(dataTransferIntent);
+        //cart view Item
+      /*  @Override
+        public void onClick(View view) {
+            int postion = getAdapterPosition();
+            Log.d("item","itemClicked"+postion);
+
+            MainMenuItem itemModel = mMainMenuItems.get(postion);
             Intent dataTransferIntent = new Intent(view.getContext(), productdetailsActivit.class);
             dataTransferIntent.putExtra(config.PRODUCT_DETAILS,itemModel);
             view.getContext().startActivity(dataTransferIntent);
-        }
+        }*/
     }
 }

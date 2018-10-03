@@ -64,9 +64,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mRecyclerView = (RecyclerView)findViewById(R.id.main_menu_itemRecyclerID);
         Main_menu_recyclreAdapter adapter = new Main_menu_recyclreAdapter(MainActivity.this, initMenuItem.getMenuItem());
         mRecyclerView.setAdapter(adapter);
-       // LinearLayoutManager manager = new LinearLayoutManager(this);
-        //manager.setOrientation(LinearLayoutManager.VERTICAL);
-        //mRecyclerView.setLayoutManager(manager);
         GridLayoutManager manager1 = new GridLayoutManager(this,2);
         mRecyclerView.setLayoutManager(manager1);
     }

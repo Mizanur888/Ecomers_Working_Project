@@ -28,8 +28,9 @@
         <activity android:name=".App.FragmentActivity" />
         <activity android:name=".App_Firebase.createSaleActivity" />
         <activity android:name=".App_Firebase.showManin_menuItem" />
-        <activity android:name=".App.productdetailsActivit"></activity>
-        <activity android:name=".App.Cart"></activity>
+        <activity android:name=".App.productdetailsActivit" />
+        <activity android:name=".App.Cart" />
+        <activity android:name=".App.ListMenuActivity"></activity>
     </application>
 
 </manifest>

@@ -15,6 +15,13 @@ public class MainMenuItem implements Serializable{
 
     }
 
+    public MainMenuItem(String productid, int images, String productName, String productDescription, String productPrice) {
+        Productid = productid;
+        Images = images;
+        ProductName = productName;
+        ProductDescription = productDescription;
+        ProductPrice = productPrice;
+    }
 
     public MainMenuItem(String productid, int images, String productName, String productDescription, String productPrice, Owner productOwner) {
         Productid = productid;
