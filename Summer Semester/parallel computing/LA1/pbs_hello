@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#PBS -l nodes=1:ppn=12
+#PBS -l walltime=1:00:00
+
+#PBS -q batch
+#PBS -N mvp-student
+#PBS -j oe
+cd /home/rahmanm2/PA1 < input
